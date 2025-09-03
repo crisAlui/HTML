@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería Masonry</title>
+  <style>
+    body{margin:0;background:#0f172a;color:#e5e7eb;font-family:system-ui,Arial,sans-serif}
+    header{padding:24px;text-align:center}
+    .masonry{column-count:4;column-gap:12px;padding:12px}
+    .item{break-inside:avoid;border-radius:12px;overflow:hidden;margin-bottom:12px;background:#111827;border:1px solid #1f2937}
+    .item div{height:160px}
+    @media (max-width:1024px){.masonry{column-count:3}}
+    @media (max-width:640px){.masonry{column-count:2}}
+  </style>
+</head>
+<body>
+  <header><h1>Galería</h1><p>Diseño tipo masonry sin JS</p></header>
+  <main class="masonry">
+    <div class="item"><div></div></div>
+    <div class="item"><div style="height:220px"></div></div>
+    <div class="item"><div style="height:140px"></div></div>
+    <div class="item"><div style="height:260px"></div></div>
+    <div class="item"><div style="height:180px"></div></div>
+    <div class="item"><div style="height:210px"></div></div>
+    <div class="item"><div style="height:120px"></div></div>
+    <div class="item"><div style="height:240px"></div></div>
+  </main>
+</body>
+</html>
