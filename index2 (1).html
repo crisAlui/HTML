@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receta: Tostadas de Aguacate</title>
+  <style>
+    body{font-family:Georgia,serif;margin:0;background:#fafaf9;color:#1f2937}
+    header{background:#0ea5e9;color:white;padding:28px 16px;text-align:center}
+    main{max-width:760px;margin:24px auto;padding:0 16px}
+    .comprado{text-decoration:line-through;color:#94a3b8}
+    li{cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tostadas de Aguacate</h1>
+    <p>Rápidas, nutritivas y perfectas para desayunar</p>
+  </header>
+  <main>
+    <h2>Ingredientes</h2>
+    <ul id="ingredientes">
+      <li>Pan integral</li>
+      <li>Aguacate</li>
+      <li>Limón</li>
+      <li>Sal y pimienta</li>
+    </ul>
+  </main>
+<script>
+document.querySelectorAll('#ingredientes li').forEach(li=>{
+  li.addEventListener('click',()=>li.classList.toggle('comprado'));
+});
+</script>
+</body>
+</html>

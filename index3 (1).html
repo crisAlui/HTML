@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía Rápida: Antigua Guatemala</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;background:#f8fafc}
+    header{background:#7c3aed;color:white;padding:20px;text-align:center}
+    .card{background:white;padding:10px;margin:10px;border-radius:8px}
+    select{margin:10px;padding:6px}
+  </style>
+</head>
+<body>
+  <header><h1>Antigua Guatemala</h1></header>
+  <main>
+    <label>Filtrar por categoría:
+      <select id="filtro">
+        <option value="all">Todas</option>
+        <option value="ver">Qué ver</option>
+        <option value="exp">Experiencia</option>
+        <option value="gas">Gastronomía</option>
+      </select>
+    </label>
+    <div id="lugares">
+      <div class="card" data-cat="ver">Arco de Santa Catalina</div>
+      <div class="card" data-cat="exp">Cerro de la Cruz</div>
+      <div class="card" data-cat="gas">Tour de café</div>
+    </div>
+  </main>
+<script>
+document.getElementById('filtro').addEventListener('change',e=>{
+  document.querySelectorAll('#lugares .card').forEach(c=>{
+    c.style.display=(e.target.value=='all'||c.dataset.cat==e.target.value)?'block':'none';
+  });
+});
+</script>
+</body>
+</html>

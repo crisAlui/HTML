@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Lista de Tareas</title>
+<style>
+body{font-family:sans-serif;background:#111827;color:#e5e7eb}
+.card{max-width:500px;margin:40px auto;padding:20px;background:#1f2937;border-radius:10px}
+input{padding:8px;width:70%}
+button{padding:8px}
+.done{text-decoration:line-through;color:#9ca3af}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Mis Tareas</h1>
+<input id="tarea" placeholder="Nueva tarea"><button onclick="agregar()">Agregar</button>
+<ul id="lista"></ul>
+</div>
+<script>
+function agregar(){
+ let txt=document.getElementById('tarea').value;
+ if(!txt) return;
+ let li=document.createElement('li'); li.textContent=txt;
+ li.onclick=()=>li.classList.toggle('done');
+ document.getElementById('lista').appendChild(li);
+ document.getElementById('tarea').value='';
+}
+</script>
+</body>
+</html>

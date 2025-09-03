@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Sonido Zen</title>
+<style>
+body{font-family:Arial,sans-serif}
+#cart{margin-top:20px;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>Sonido Zen</h1>
+<p>Audífonos con cancelación de ruido</p>
+<button onclick="comprar()">Comprar ahora</button>
+<div id="cart">Carrito: 0</div>
+<script>
+let count=0;
+function comprar(){count++;document.getElementById('cart').innerText="Carrito: "+count;}
+</script>
+</body>
+</html>

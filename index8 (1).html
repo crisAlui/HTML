@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>FAQ</title>
+<style>
+details{margin:10px;padding:10px;border:1px solid #ccc;border-radius:6px}
+</style>
+</head>
+<body>
+<h1>Preguntas Frecuentes</h1>
+<details><summary>¿Envío?</summary><p>24 a 72 horas.</p></details>
+<details><summary>¿Rastreo?</summary><p>Con tu número de guía.</p></details>
+<details><summary>¿Si no estoy?</summary><p>Dos intentos, luego recoges en sucursal.</p></details>
+<script>
+document.querySelectorAll('details').forEach(det=>{
+ det.addEventListener('toggle',()=>{
+   if(det.open){
+     document.querySelectorAll('details').forEach(o=>{if(o!=det) o.open=false});
+   }
+ });
+});
+</script>
+</body>
+</html>
